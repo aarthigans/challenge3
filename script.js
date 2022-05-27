@@ -1,6 +1,6 @@
 // Assignment code here
 
-//declaring the variables
+//declaring the variables lowerCase, upperCase, numbers, specialCharacters
 lowerCase = [
   "a",
   "b",
@@ -94,6 +94,9 @@ function generatePassword() {
     "Confirm to add special characters to your password"
   );
 
+  //Lower case is assigned in fChars
+  //if uppercase,special characters, numbers are needed-it'll be concatenated to the lowercase to generate random values
+  //then the array values are pushed to form the password
   let fChars = lowerCase;
   if (fUpper) fChars = fChars.concat(upperCase);
   if (fSpecialCharacters) fChars = fChars.concat(specialCharacters);
@@ -109,7 +112,8 @@ function generatePassword() {
 // Write password to the #password input
 function writePassword(password) {
   var password = generatePassword();
-  window.alert(password);
+   window.alert(password);
+
 }
 
 // Add event listener to generate button)
